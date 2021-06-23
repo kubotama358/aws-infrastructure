@@ -14,13 +14,6 @@ else
 	aws s3api create-bucket --bucket ${BUCKET_NAME} --create-bucket-configuration LocationConstraint=ap-northeast-1
 endif
 
-get-keypair:
-ifeq ($(AWS),.aws)
-	aws s3 --profile ${PROFILE} cp --region ap-northeast-1 ${KEYPAIR_BUCKET} terraform/${TARGET}/keypair/${ENV} --recursive
-else
-	aws s3 cp --region ap-northeast-1 ${KEYPAIR_BUCKET} terraform/${TARGET}/keypair/${ENV} --recursive
-endif
-
 tf:
 	@${CD_TF} && \
 		terraform workspace select ${PROFILE} && \
