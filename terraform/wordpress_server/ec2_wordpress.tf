@@ -2,10 +2,10 @@
 # EC2 Instance
 #####################################
 resource "aws_instance" "wordpress_server" {
-  ami                         = var.wordpress_server_ami_id
-  instance_type               = var.wordpress_server_instance_type
-  iam_instance_profile        = var.wordpress_server_iam_instance_profile
-  key_name                    = var.wordpress_server_key_name
+  ami                  = var.wordpress_server_ami_id
+  instance_type        = var.wordpress_server_instance_type
+  iam_instance_profile = var.wordpress_server_iam_instance_profile
+  key_name             = var.wordpress_server_key_name
   vpc_security_group_ids = [
     aws_security_group.wordpress_server_sg.id,
   ]
@@ -14,8 +14,8 @@ resource "aws_instance" "wordpress_server" {
   user_data  = data.template_file.wordpress-server_user-data.rendered
 
   tags = {
-    Name             = "${var.env}_wordpress_server"
-    env              = var.env
+    Name = "${var.env}_wordpress_server"
+    env  = var.env
   }
 }
 

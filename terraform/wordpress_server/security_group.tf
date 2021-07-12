@@ -6,16 +6,16 @@ resource "aws_security_group" "wordpress_server_sg" {
   description = "wordpress_server_sg"
   vpc_id      = data.terraform_remote_state.remote_state_common_network.outputs.common_vpc_id
 
-//  ingress {
-//    from_port       = 22
-//    to_port         = 22
-//    protocol        = "tcp"
-//    cidr_blocks     = var.wordpress_server_sg_cidrs
-//  }
+  //  ingress {
+  //    from_port       = 22
+  //    to_port         = 22
+  //    protocol        = "tcp"
+  //    cidr_blocks     = var.wordpress_server_sg_cidrs
+  //  }
   ingress {
-    from_port = 0
-    to_port = 0
-    protocol = "-1"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
     cidr_blocks = var.wordpress_server_sg_cidrs
   }
   egress {

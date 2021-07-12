@@ -4,7 +4,7 @@
 * [Homebrew](https://brew.sh/index_ja.html)
 
 ### Installation
-* install terraform(0.10.0 or more)
+* install terraform(v1.0.0)
 
 ```
 brew install terraform

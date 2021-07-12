@@ -1,9 +1,9 @@
 #####################################
 # Common Settings
 #####################################
-env = "prd"
-account_id = "997221705915"
-region = "ap-northeast-1"
+env          = "prd"
+account_id   = "997221705915"
+region       = "ap-northeast-1"
 profile_name = "prd"
 
 #####################################
