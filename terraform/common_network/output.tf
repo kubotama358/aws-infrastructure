@@ -33,3 +33,7 @@ output "common_public_subnet_1c_cidr" {
 //output "common_private_subnet_1c_cidr" {
 //  value = aws_subnet.common_private_subnet_1c.cidr_block
 //}
+
+output "maze555_route53_zone_id" {
+  value = aws_route53_zone.maze555_route53_zone.zone_id
+}

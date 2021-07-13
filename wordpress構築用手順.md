@@ -72,3 +72,8 @@ https://${domain_name}にアクセスできるか確認
 
 アクセスできたなら以下のurlからwordpressの初期設定へと進む  
 https://${domain_name}/wordpress/wp-admin/setup-config.php
+
+サーバへのsshは
+```$xslt
+ssh -i ~/.ssh/dev_wordpress_server_keypair.pem ec2-user@xxx.xxx.xxx.xxx
+```
