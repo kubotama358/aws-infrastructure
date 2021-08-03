@@ -75,4 +75,3 @@ cat ~/bitnami_application_password
 ```
 cat ./bitnami_credentials
 ```
-
